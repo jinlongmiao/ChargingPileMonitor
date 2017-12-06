@@ -1,4 +1,4 @@
-package simulator;
+package simulator.dataItem;
 
 /**
  * 充电过程充电桩输出数据：

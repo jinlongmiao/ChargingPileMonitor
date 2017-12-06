@@ -1,4 +1,4 @@
-package simulator;
+package simulator.dataItem;
 
 /**
  * 车辆动力电池总电压、充电电压测量值、充电电流测量值、BMS需求充电电压、BMS需求充电电流、单体电池最高电压、单体电池最低电压、单体最高温度、单体最低温度，剩余充电时间、当前车辆Soc；

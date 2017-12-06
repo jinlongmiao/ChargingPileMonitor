@@ -1,4 +1,4 @@
-package simulator;
+package simulator.dataItem;
 
 /**
  * 工作状态、检修门状态、充电枪电子锁状态、急停按钮状态、车辆连接状态、避雷器状态、车辆连接引导状态等、直流输出接触器状态
