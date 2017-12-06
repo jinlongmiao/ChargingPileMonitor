@@ -7,13 +7,7 @@ import simulator.dataItem.FaultAlarmRecord;
 /**
  * Created by violetMoon on 2017/12/6.
  */
-public interface EventDataReporter {
-
-    /**
-     *
-     * @param out 网络传输
-     */
-    void setOutputStream(Object out);
+public interface EventDataReporter extends Reporter{
 
     void reportEventRecord(EventRecord eventRecord);
 

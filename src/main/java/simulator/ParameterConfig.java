@@ -12,11 +12,13 @@ public interface ParameterConfig {
      * @param ping 平电价
      * @param gu 谷电价
      */
-    void configElectronicPrice(double jian, double feng, double ping, double gu);
+    void setElectronicPrice(double jian, double feng, double ping, double gu);
 
-    void configMaxRunningOutput(int outputPower, int outputCurrent, int outputVoltage);
+    void setMaxRunningOutput(int outputPower, int outputCurrent, int outputVoltage);
 
-    void configClock(double timestamp);
+    void setClock(double timestamp);
 
-    void configRealTimeDataReportPeriod(int periodMs);
+    void setRealTimeReporter(Reporter realTimeReporter);
+
+    void setRealTimeDataReportPeriod(int periodMs);
 }
