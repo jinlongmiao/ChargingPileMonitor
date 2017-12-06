@@ -9,6 +9,12 @@ import simulator.dataItem.FaultAlarmRecord;
  */
 public interface EventDataReporter {
 
+    /**
+     *
+     * @param out 网络传输
+     */
+    void setOutputStream(Object out);
+
     void reportEventRecord(EventRecord eventRecord);
 
     void reportFaultAlarmRecord(FaultAlarmRecord faultAlarmRecord);
