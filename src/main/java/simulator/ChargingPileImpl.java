@@ -45,19 +45,4 @@ public class ChargingPileImpl implements ChargingPile {
         System.out.println("hehe");
     }
 
-    public void setNetInterface(Object out) {
-        System.out.println("hehe");
-    }
-
-    public void setReportPeriod(double periodMs) {
-        System.out.println("hehe");
-    }
-
-    public void reportData(ChargingData Data) {
-
-    }
-
-    public void reportRecord(PileRecord eventRecord) {
-
-    }
 }

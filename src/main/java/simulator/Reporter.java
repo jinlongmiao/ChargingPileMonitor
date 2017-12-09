@@ -5,15 +5,10 @@ package simulator;
  */
 public interface Reporter {
 
-    /**
-     *
-     * @param out
-     */
-    void setNetInterface(Object out);
+    void start();
 
     /**
-     * 设置上报周期
-     * @param periodMs
+     * once stopped, can't be restarted, should renew a reporter
      */
-    void setReportPeriod(double periodMs);
+    void stop();
 }
