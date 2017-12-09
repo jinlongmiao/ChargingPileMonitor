@@ -18,8 +18,10 @@ public class DataGenerator implements Runnable {
   }
 
   public void run() {
-    RealTimeDataEnum[] values = RealTimeDataEnum.values();
-    int dataType = random.nextInt(values.length);
-    queue.add(values[dataType].random());
+    while (true) {
+      RealTimeDataEnum[] values = RealTimeDataEnum.values();
+      int dataType = random.nextInt(values.length);
+      queue.add(values[dataType].random());
+    }
   }
 }

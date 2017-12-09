@@ -46,16 +46,20 @@ public class RealTimeDataReporter implements Reporter {
     private BlockingQueue<RealTimeData> queue;
     private long periodMs;
 
-    public void setNetInterface(OutputStream out) {
+    public ReporterBuilder setNetInterface(OutputStream out) {
       this.outputStream = outputStream;
+      return this;
     }
 
-    public void setReportPeriod(long periodMs) {
+    public ReporterBuilder setReportPeriod(long periodMs) {
       this.periodMs = periodMs;
+      return this;
     }
 
-    public void setQueue(BlockingQueue<RealTimeData> queue) {
+    @Override
+    public ReporterBuilder setQueue(BlockingQueue<RealTimeData> queue) {
       this.queue = queue;
+      return this;
     }
 
     public RealTimeDataReporter build() {
