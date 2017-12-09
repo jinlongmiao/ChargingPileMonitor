@@ -1,9 +1,6 @@
 package simulator;
 
-import simulator.dataItem.ChargingDealRecord;
-import simulator.dataItem.EventRecord;
-import simulator.dataItem.FaultAlarmRecord;
-import simulator.dataItem.PileRecord;
+import java.io.OutputStream;
 
 /**
  * Created by violetMoon on 2017/12/6.
@@ -20,11 +17,11 @@ public class EventDataReporter implements Reporter{
 
     class EventDataReporterBuilder implements ReporterBuilder {
 
-        public void setNetInterface(Object out) {
+        public void setNetInterface(OutputStream out) {
 
         }
 
-        public void setReportPeriod(double periodMs) {
+        public void setReportPeriod(long periodMs) {
 
         }
 

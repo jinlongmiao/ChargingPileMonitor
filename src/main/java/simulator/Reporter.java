@@ -10,5 +10,5 @@ public interface Reporter {
     /**
      * once stopped, can't be restarted, should renew a reporter
      */
-    void stop();
+    void stop() throws InterruptedException;
 }

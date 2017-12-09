@@ -5,7 +5,7 @@ package simulator.dataItem;
  * 、充电模块故障、绝缘故障；交流输入电压、交流输入电流、车辆引导电压、BMS辅助电源电压、充电枪插头温度；
  * Created by violetMoon on 2017/12/4.
  */
-public class AllPeriodRealTimeData implements ChargingData {
+public class AllPeriodRealTimeData implements RealTimeData {
 //    public enum WorkingStatus {
 //        IDLE(0), CHARGING(1), CHARGING_COMPLETE(2), FAILURE(255);
 //

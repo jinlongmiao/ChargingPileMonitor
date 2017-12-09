@@ -5,7 +5,7 @@ package simulator.dataItem;
  *
  * <h3></h3>
  */
-public interface ChargingData {
+public interface RealTimeData {
 
   String getData();
 }
