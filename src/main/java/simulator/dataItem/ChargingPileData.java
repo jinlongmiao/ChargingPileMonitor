@@ -6,5 +6,9 @@ package simulator.dataItem;
 
  * Created by violetMoon on 2017/12/4.
  */
-public class ChargingPileData {
+public class ChargingPileData implements ChargingData{
+
+  public String getData() {
+    return null;
+  }
 }

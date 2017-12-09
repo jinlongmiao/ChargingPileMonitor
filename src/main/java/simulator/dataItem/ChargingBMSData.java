@@ -5,6 +5,9 @@ package simulator.dataItem;
  电池类型、开始充电Soc、车辆Vin码、最高允许充电电压、最大允许充电电流等；
  * Created by violetMoon on 2017/12/4.
  */
-public class ChargingBMSData {
+public class ChargingBMSData implements ChargingData{
 
+  public String getData() {
+    return null;
+  }
 }

@@ -13,18 +13,6 @@ public class ChargingPileImpl implements ChargingPile {
 
     private RealTimeDataReporter realTimeDataReporter;
 
-    public void reportEventRecord(EventRecord eventRecord) {
-        System.out.println("hehe");
-    }
-
-    public void reportFaultAlarmRecord(FaultAlarmRecord faultAlarmRecord) {
-        System.out.println("hehe");
-    }
-
-    public void reportChargingDealRecord(ChargingDealRecord chargingDealRecord) {
-        System.out.println("hehe");
-    }
-
     public void setElectronicPrice(double jian, double feng, double ping, double gu) {
         System.out.println("hehe");
     }
@@ -42,18 +30,6 @@ public class ChargingPileImpl implements ChargingPile {
     }
 
     public void setRealTimeDataReportPeriod(int periodMs) {
-        System.out.println("hehe");
-    }
-
-    public void reportAllPeriodRealTimeData(AllPeriodRealTimeData data) {
-        System.out.println("hehe");
-    }
-
-    public void reportOutputData(ChargingOutputData outputData) {
-        System.out.println("hehe");
-    }
-
-    public void reportBMSData(BMSData bmsData) {
         System.out.println("hehe");
     }
 
@@ -75,5 +51,13 @@ public class ChargingPileImpl implements ChargingPile {
 
     public void setReportPeriod(double periodMs) {
         System.out.println("hehe");
+    }
+
+    public void reportData(ChargingData Data) {
+
+    }
+
+    public void reportRecord(PileRecord eventRecord) {
+
     }
 }

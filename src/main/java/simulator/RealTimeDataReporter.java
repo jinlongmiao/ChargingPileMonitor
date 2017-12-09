@@ -7,9 +7,5 @@ import simulator.dataItem.*;
  */
 public interface RealTimeDataReporter extends Reporter{
 
-    void reportAllPeriodRealTimeData(AllPeriodRealTimeData data);
-
-    void reportOutputData(ChargingOutputData outputData);
-
-    void reportBMSData(BMSData bmsData);
+    void reportData(ChargingData Data);
 }
