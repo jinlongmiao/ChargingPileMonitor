@@ -48,7 +48,7 @@ public class ParameterStore implements ParameterConfig, RemoteControl{
             throw new IllegalStateException("reporter null");
         if (periodMs <= 0)
             throw new IllegalArgumentException("periodMs must be greater than zero");
-        realTimeDataReporter.setReportPeriod(periodMs);
+        //realTimeDataReporter.setReportPeriod(periodMs);
     }
 
     public void startCharging() {
