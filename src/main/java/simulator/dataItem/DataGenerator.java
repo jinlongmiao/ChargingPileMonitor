@@ -2,6 +2,7 @@ package simulator.dataItem;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by zzt on 12/8/17.
@@ -22,6 +23,11 @@ public class DataGenerator implements Runnable {
       RealTimeDataEnum[] values = RealTimeDataEnum.values();
       int dataType = random.nextInt(values.length);
       queue.add(values[dataType].random());
+      try {
+        TimeUnit.SECONDS.sleep(1);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
     }
   }
 }

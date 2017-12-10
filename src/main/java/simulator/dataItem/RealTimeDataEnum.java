@@ -38,55 +38,48 @@ public enum RealTimeDataEnum {
               random.nextInt(DirectCurrentContactorFaultStatus.values().length))
           .setChargingModuleFault(random.nextInt(ChargingModuleFault.values().length))
           .setInsulationFault(random.nextInt(InsulationFault.values().length))
-          .setAcInputVoltageA(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setAcInputVoltageB(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setAcInputVoltageC(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setAcInputCurrentA(random.nextInt(currentMax - currentMin) + currentMin)
-          .setAcInputCurrentB(random.nextInt(currentMax - currentMin) + currentMin)
-          .setAcInputCurrentC(random.nextInt(currentMax - currentMin) + currentMin)
-          .setVehicleGuideVoltage(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setBMSAuxiliaryVoltage(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setChargerProbeTemperature(random.nextInt(tempMax - tempMin) + tempMin);
+          .setAcInputVoltageA(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setAcInputVoltageB(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setAcInputVoltageC(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setAcInputCurrentA(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setAcInputCurrentB(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setAcInputCurrentC(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setVehicleGuideVoltage(random.nextInt(
+              Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setBMSAuxiliaryVoltage(random.nextInt(
+              Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setChargerProbeTemperature(random.nextInt(Const.tempMax - Const.tempMin) + Const.tempMin);
       return data;
     }
   }, C_BMS {
     @Override
     RealTimeData random() {
       return new ChargingBMSData()
-          .setBatteryVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setChargingVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setChargingCur(random.nextInt(currentMax - currentMin) + currentMin)
-          .setBmsVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setBmsCur(random.nextInt(currentMax - currentMin) + currentMin)
-          .setSingleMaxVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setSingleMinVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setTimeToCharge(random.nextInt(timeMax))
+          .setBatteryVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setChargingVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setChargingCur(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setBmsVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setBmsCur(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setSingleMaxVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setSingleMinVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setTimeToCharge(random.nextInt(Const.timeMax))
           .setVehSoc(random.nextDouble())
           .setBatteryType(random.nextInt(BatteryType.values().length))
           .setChargingSoc(random.nextDouble())
           .setVehVin(UUID.randomUUID().toString())
-          .setChargingMaxVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setChargingMaxCur(random.nextInt(currentMax - currentMin) + currentMin);
+          .setChargingMaxVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setChargingMaxCur(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin);
     }
   }, C_PILE {
     @Override
     RealTimeData random() {
       return new ChargingPileData()
-          .setOutputVol(random.nextInt(voltageMax - voltageMin) + voltageMin)
-          .setOutpuCur(random.nextInt(currentMax - currentMin) + currentMin)
-          .setPower(random.nextInt(powerMax))
-          .setTime(random.nextInt(timeMax));
+          .setOutputVol(random.nextInt(Const.voltageMax - Const.voltageMin) + Const.voltageMin)
+          .setOutpuCur(random.nextInt(Const.currentMax - Const.currentMin) + Const.currentMin)
+          .setPower(random.nextInt(Const.powerMax))
+          .setTime(random.nextInt(Const.timeMax));
     }
   };
-
-  static final int voltageMax = 220;
-  static final int voltageMin = 110;
-  static final int currentMax = 100;
-  static final int currentMin = 200;
-  static final int tempMax = 50;
-  static final int tempMin = -10;
-  static final int timeMax = 30;
-  static final int powerMax = 300;
 
   Random random = new Random(12);
 
