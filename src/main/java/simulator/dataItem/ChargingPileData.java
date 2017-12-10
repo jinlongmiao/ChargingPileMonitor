@@ -10,7 +10,7 @@ public class ChargingPileData implements RealTimeData {
 
   private int outputVol;
   private int outputCur;
-  private int acMaxTemp = RealTimeDataEnum.tempMax;
+  private int acMaxTemp = Const.tempMax;
   private int power;
   private int time;
 

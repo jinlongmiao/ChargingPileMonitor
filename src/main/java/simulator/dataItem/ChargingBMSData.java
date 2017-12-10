@@ -97,8 +97,8 @@ public class ChargingBMSData implements RealTimeData {
 	private int bmsCur;
 	private int singleMaxVol;
 	private int singleMinVol;
-	private int singleMaxTemp = RealTimeDataEnum.tempMax;
-	private int singleMinTemp = RealTimeDataEnum.tempMin;
+	private int singleMaxTemp = Const.tempMax;
+	private int singleMinTemp = Const.tempMin;
 	private int timeToCharge;
 	private double vehSoc;
 	private int batteryType;
