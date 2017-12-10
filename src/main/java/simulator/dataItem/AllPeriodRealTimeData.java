@@ -6,7 +6,30 @@ package simulator.dataItem;
  * Created by violetMoon on 2017/12/4.
  */
 public class AllPeriodRealTimeData implements RealTimeData {
-    public enum WorkingStatus {
+    @Override
+	public String toString() {
+		return "AllPeriodRealTimeData [workingStatus=" + workingStatus
+				+ ", maintainDoorStatus=" + maintainDoorStatus
+				+ ", electronicLockStatus=" + electronicLockStatus
+				+ ", stopButtonStatus=" + stopButtonStatus
+				+ ", vehicleConnectingStatus=" + vehicleConnectingStatus
+				+ ", arresterStatus=" + arresterStatus
+				+ ", vehicleConnectGuideStatus=" + vehicleConnectGuideStatus
+				+ ", directCurrentContactorStatus="
+				+ directCurrentContactorStatus
+				+ ", directCurrentContactorFaultStatus="
+				+ directCurrentContactorFaultStatus + ", chargingModuleFault="
+				+ chargingModuleFault + ", insulationFault=" + insulationFault
+				+ ", acInputVoltageA=" + acInputVoltageA + ", acInputVoltageB="
+				+ acInputVoltageB + ", acInputVoltageC=" + acInputVoltageC
+				+ ", acInputCurrentA=" + acInputCurrentA + ", acInputCurrentB="
+				+ acInputCurrentB + ", acInputCurrentC=" + acInputCurrentC
+				+ ", vehicleGuideVoltage=" + vehicleGuideVoltage
+				+ ", BMSAuxiliaryVoltage=" + BMSAuxiliaryVoltage
+				+ ", ChargerProbeTemperature=" + ChargerProbeTemperature + "]";
+	}
+
+	public enum WorkingStatus {
         IDLE(0), CHARGING(1), CHARGING_COMPLETE(2), FAILURE(255);
 
         private int value;
@@ -65,7 +88,31 @@ public class AllPeriodRealTimeData implements RealTimeData {
         NORMAL, CLOSE
     }
 
-    /**
+    public AllPeriodRealTimeData() {
+		super();
+		this.workingStatus = 1;
+		this.maintainDoorStatus = 0;
+		this.electronicLockStatus = 1;
+		this.stopButtonStatus = 0;
+		this.vehicleConnectingStatus = 1;
+		this.arresterStatus = 0;
+		this.vehicleConnectGuideStatus = 0;
+		this.directCurrentContactorStatus = 1;
+		this.directCurrentContactorFaultStatus = 2;
+		this.chargingModuleFault = 0;
+		this.insulationFault = 0;
+		this.acInputVoltageA = 220;
+		this.acInputVoltageB = 220;
+		this.acInputVoltageC = 220;
+		this.acInputCurrentA = 150;
+		this.acInputCurrentB = 150;
+		this.acInputCurrentC = 150;
+		this.vehicleGuideVoltage = 12;
+		BMSAuxiliaryVoltage = 12;
+		ChargerProbeTemperature = 40;
+	}
+
+	/**
      * 直流输出接触器故障状态
      */
     public enum DirectCurrentContactorFaultStatus {
@@ -94,7 +141,87 @@ public class AllPeriodRealTimeData implements RealTimeData {
     private int arresterStatus;
     private int vehicleConnectGuideStatus;
     private int directCurrentContactorStatus;
-    private int directCurrentContactorFaultStatus;
+    public int getWorkingStatus() {
+		return workingStatus;
+	}
+
+	public int getMaintainDoorStatus() {
+		return maintainDoorStatus;
+	}
+
+	public int getElectronicLockStatus() {
+		return electronicLockStatus;
+	}
+
+	public int getStopButtonStatus() {
+		return stopButtonStatus;
+	}
+
+	public int getVehicleConnectingStatus() {
+		return vehicleConnectingStatus;
+	}
+
+	public int getArresterStatus() {
+		return arresterStatus;
+	}
+
+	public int getVehicleConnectGuideStatus() {
+		return vehicleConnectGuideStatus;
+	}
+
+	public int getDirectCurrentContactorStatus() {
+		return directCurrentContactorStatus;
+	}
+
+	public int getDirectCurrentContactorFaultStatus() {
+		return directCurrentContactorFaultStatus;
+	}
+
+	public int getChargingModuleFault() {
+		return chargingModuleFault;
+	}
+
+	public int getInsulationFault() {
+		return insulationFault;
+	}
+
+	public int getAcInputVoltageA() {
+		return acInputVoltageA;
+	}
+
+	public int getAcInputVoltageB() {
+		return acInputVoltageB;
+	}
+
+	public int getAcInputVoltageC() {
+		return acInputVoltageC;
+	}
+
+	public int getAcInputCurrentA() {
+		return acInputCurrentA;
+	}
+
+	public int getAcInputCurrentB() {
+		return acInputCurrentB;
+	}
+
+	public int getAcInputCurrentC() {
+		return acInputCurrentC;
+	}
+
+	public int getVehicleGuideVoltage() {
+		return vehicleGuideVoltage;
+	}
+
+	public int getBMSAuxiliaryVoltage() {
+		return BMSAuxiliaryVoltage;
+	}
+
+	public int getChargerProbeTemperature() {
+		return ChargerProbeTemperature;
+	}
+
+	private int directCurrentContactorFaultStatus;
     private int chargingModuleFault;
     private int insulationFault;
 
