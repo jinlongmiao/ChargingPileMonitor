@@ -9,7 +9,7 @@ package simulator.dataItem;
 public class ChargingPileData implements RealTimeData {
 
   private int outputVol;
-  private int outpuCur;
+  private int outputCur;
   private int acMaxTemp = Const.tempMax;
   private int power;
   private int time;
@@ -20,7 +20,7 @@ public class ChargingPileData implements RealTimeData {
   }
 
   public ChargingPileData setOutpuCur(int outpuCur) {
-    this.outpuCur = outpuCur;
+    this.outputCur = outpuCur;
     return this;
   }
 
@@ -39,6 +39,29 @@ public class ChargingPileData implements RealTimeData {
     return this;
   }
 
+  public int getOutputVol() {
+    return outputVol;
+  }
+
+  public int getOutputCur() {
+    return outputCur;
+  }
+
+  public void setOutputCur(int outputCur) {
+    this.outputCur = outputCur;
+  }
+
+  public int getAcMaxTemp() {
+    return acMaxTemp;
+  }
+
+  public int getPower() {
+    return power;
+  }
+
+  public int getTime() {
+    return time;
+  }
   public String getData() {
     return null;
   }
