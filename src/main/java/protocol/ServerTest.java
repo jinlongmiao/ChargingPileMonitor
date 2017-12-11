@@ -7,6 +7,8 @@ import java.net.Socket;
 
 public class ServerTest {
     public static void main(String[] args) throws Exception {
+        ObjectDecoder objectDecoder = new ObjectDecoder();
+        ObjectEncoder objectEncoder = new ObjectEncoder();
         ServerSocket server = new ServerSocket(23457);
         Socket socket = server.accept();
         System.out.println("连接成功");

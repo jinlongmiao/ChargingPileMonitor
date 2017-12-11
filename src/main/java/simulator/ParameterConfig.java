@@ -17,8 +17,4 @@ public interface ParameterConfig {
     void setMaxRunningOutput(int outputPower, int outputCurrent, int outputVoltage);
 
     void setClock(double timestamp);
-
-    void setRealTimeReporter(Reporter realTimeReporter);
-
-    void setRealTimeDataReportPeriod(int periodMs);
 }

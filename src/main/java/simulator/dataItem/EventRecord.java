@@ -6,7 +6,7 @@ package simulator.dataItem;
  */
 public class EventRecord implements PileRecord{
 
-  enum EventType {
+  public enum EventType {
     START_CHARGING,STOP_CHARGING,CONFIG
   }
   private long time;

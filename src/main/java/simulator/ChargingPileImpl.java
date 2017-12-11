@@ -1,7 +1,5 @@
 package simulator;
 
-import simulator.dataItem.*;
-
 /**
  * Created by violetMoon on 2017/12/6.
  */
@@ -9,19 +7,31 @@ public class ChargingPileImpl implements ChargingPile {
 
     private ParameterStore parameterStore;
 
-    private EventDataReporter eventDataReporter;
+    private EventDataReporterImpl eventDataReporterImpl;
 
-    private RealTimeDataReporter realTimeDataReporter;
+    private RealTimeDataReporterImpl realTimeDataReporterImpl;
+
+    public ChargingPileImpl() {
+        //init
+        parameterStore = new ParameterStore();
+        // TODO: 2017/12/10
+        eventDataReporterImpl = new EventDataReporterImpl.EventDataReporterBuilder().build();
+        realTimeDataReporterImpl = new RealTimeDataReporterImpl.RealTimeDataReporterBuilder().build();
+        //// TODO: 2017/12/10
+        eventDataReporterImpl.start();
+        realTimeDataReporterImpl.start();
+    }
 
     public void setElectronicPrice(double jian, double feng, double ping, double gu) {
-        System.out.println("hehe");
+        parameterStore.setElectronicPrice(jian,feng,ping,gu);
     }
 
     public void setMaxRunningOutput(int outputPower, int outputCurrent, int outputVoltage) {
-        System.out.println("hehe");
+        parameterStore.setMaxRunningOutput(outputPower,outputCurrent,outputVoltage);
     }
 
     public void setClock(double timestamp) {
+        parameterStore.setClock(timestamp);
         System.out.println("hehe");
     }
 
@@ -34,15 +44,15 @@ public class ChargingPileImpl implements ChargingPile {
     }
 
     public void startCharging() {
-        System.out.println("hehe");
+        parameterStore.startCharging();
     }
 
     public void stopCharging() {
-        System.out.println("hehe");
+        parameterStore.stopCharging();
     }
 
     public void setRunningOutput(int voltage, int current) {
-        System.out.println("hehe");
+        parameterStore.setRunningOutput(voltage, current);
     }
 
 }

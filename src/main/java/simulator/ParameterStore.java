@@ -16,14 +16,57 @@ public class ParameterStore implements ParameterConfig, RemoteControl{
 
     private double clock;
 
-    private Reporter realTimeDataReporter;
-
     private boolean onCharging;
     private int volage;
     private int current;
 
+    public double getJianDianJia() {
+        return jianDianJia;
+    }
+
+    public double getFengDianJia() {
+        return fengDianJia;
+    }
+
+    public double getPingDianJia() {
+        return pingDianJia;
+    }
+
+    public double getGuDianJia() {
+        return guDianJia;
+    }
+
+    public int getOutputPower() {
+        return outputPower;
+    }
+
+    public int getOutputCurrent() {
+        return outputCurrent;
+    }
+
+    public int getOutputVoltage() {
+        return outputVoltage;
+    }
+
+    public double getClock() {
+        return clock;
+    }
+
+    public boolean isOnCharging() {
+        return onCharging;
+    }
+
+    public int getVolage() {
+        return volage;
+    }
+
+    public int getCurrent() {
+        return current;
+    }
+
     public void setElectronicPrice(double jian, double feng, double ping, double gu) {
         this.jianDianJia = jian;
+
         this.fengDianJia = feng;
         this.pingDianJia = ping;
         this.guDianJia = gu;
@@ -39,17 +82,6 @@ public class ParameterStore implements ParameterConfig, RemoteControl{
         this.clock = timestamp;
     }
 
-    public void setRealTimeReporter(Reporter realTimeReporter) {
-        this.realTimeDataReporter = realTimeReporter;
-    }
-
-    public void setRealTimeDataReportPeriod(int periodMs) {
-        if (this.realTimeDataReporter == null)
-            throw new IllegalStateException("reporter null");
-        if (periodMs <= 0)
-            throw new IllegalArgumentException("periodMs must be greater than zero");
-        //realTimeDataReporter.setReportPeriod(periodMs);
-    }
 
     public void startCharging() {
         if (onCharging)
